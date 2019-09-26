@@ -1,0 +1,13 @@
+<h1>Todo List</h1>
+<p>You have <strong><% todos.length %></strong> Todo Items!</p>
+<p><a href="/todo/new">Create a Todo</a></p>
+<ul id="todos">
+  <% for (let todo of todos) {%>
+    <li>
+        <strong><%= todo.name + " - " + todo.id%></strong> ||
+        <a href="/todo/?id=<%= todo.id %>">View Details</a> ||
+        <a href="/todo/edit/?id=<%= todo.id %>">Edit</a> ||
+        <a href="/todo/delete/?id=<%= todo.id %>">Delete</a>
+    </li>
+  <% } %>
+</ul>
